@@ -1,0 +1,77 @@
+<!-- 背景颜色 -->
+<view class="bg_1"></view>
+<!-- 头部 -->
+<view class="header">
+  <navigator class="place">
+    <view class="text-line"></view>
+    <text>成都旅游攻略</text>
+    <i-icon type="unfold" size="25" color="#80848f" />
+  </navigator>
+    <view class="temperature">
+    <image src="../image/ic_weather.png"></image>
+    <view class="bg-temp">
+      <text>16~24℃</text>
+    </view>
+  </view>
+</view>
+<!-- 景区 -->
+<view class="container-item" wx-if="{{current=='way'}}">
+  <view class="scenic-wrap">
+    <navigator class="scenic-item" url="../detail/detail?chooseIndex=0">
+      <image mode='widthFix'  src='http://139.196.29.126:8081/json/kuanzhai1.jpg'></image>
+      <text>宽窄巷子</text>
+      <i-tag class="i-tags" name="电话">
+        028-86259233
+      </i-tag>
+    </navigator>
+        <navigator class="scenic-item"  url="../detail/detail?chooseIndex=1">
+      <image mode='widthFix' src='http://139.196.29.126:8081/json/panda1.jpg'></image>
+      <text>成都大熊猫繁育研究基地</text>
+      <i-tag class="i-tags" name="电话">
+        028-83510033
+      </i-tag>
+    </navigator>
+        <navigator class="scenic-item"  url="../detail/detail?chooseIndex=2">
+      <image mode='widthFix' src='http://139.196.29.126:8081/json/chunxilu1.jpg'></image>
+      <text>春熙路</text>
+      <i-tag class="i-tags" name="电话">
+        028-87706026
+      </i-tag>
+    </navigator>
+        <navigator class="scenic-item"  url="../detail/detail?chooseIndex=3">
+      <image mode='widthFix' src='http://139.196.29.126:8081/json/dufu1.jpg'></image>
+      <text>杜甫草堂博物馆</text>
+      <i-tag class="i-tags" name="电话">
+        028-66005161
+      </i-tag>
+    </navigator>
+        <navigator class="scenic-item"  url="../detail/detail?chooseIndex=4">
+      <image mode='widthFix' src='http://139.196.29.126:8081/json/wuhou1.jpg'></image>
+      <text>武侯祠</text>
+      <i-tag class="i-tags" name="电话">
+        028-85535951
+      </i-tag>
+    </navigator>
+        <navigator class="scenic-item"  url="../detail/detail?chooseIndex=5">
+      <image mode='widthFix' src='http://139.196.29.126:8081/json/dujiangyan1.jpg'></image>
+      <text>都江堰景区</text>
+      <i-tag class="i-tags" name="电话">
+        028-87138587
+      </i-tag>
+    </navigator>
+        <navigator class="scenic-item"  url="../detail/detail?chooseIndex=6">
+      <image mode='widthFix' src='http://139.196.29.126:8081/json/jinli1.jpg'></image>
+      <text>锦里</text>
+      <i-tag class="i-tags" name="电话">
+        028-66311313
+      </i-tag>
+    </navigator>
+        <navigator class="scenic-item"  url="../detail/detail?chooseIndex=7">
+      <image mode='widthFix' src='http://139.196.29.126:8081/json/qingcheng1.jpg'></image>
+      <text>青城后山</text>
+      <i-tag class="i-tags" name="电话">
+        028-87239460
+      </i-tag>
+    </navigator>
+  </view>
+</view>

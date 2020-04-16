@@ -1,0 +1,107 @@
+
+  <view class="fixed-area">
+    <!-- 导航栏 -->
+    <view class="rectangle">
+      <swiper display-multiple-items='4.5' class='swiper-detail'>
+        <swiper-item bindtap='clickBtn1' data-hash="m1">
+          <image src='https://www.uumon.com/rgtImg/icon/1.png' wx:if="{{!but_1}}"></image>
+          <image src='https://www.uumon.com/rgtImg/icon/选中按钮1@2x.png' wx:if="{{but_1}}"></image>
+        </swiper-item>
+        <swiper-item>
+          <image src='https://www.uumon.com/rgtImg/icon/2.png'></image>
+        </swiper-item>
+        <swiper-item bindtap='clickBtn3' data-hash="m3">
+          <image src='https://www.uumon.com/rgtImg/icon/3.png' wx:if="{{!but_3}}"></image>
+          <image src='https://www.uumon.com/rgtImg/icon/选中按钮3@2x.png' wx:if="{{but_3}}"></image>
+        </swiper-item>
+        <swiper-item bindtap='clickBtn4' data-hash="m4">
+          <image src='https://www.uumon.com/rgtImg/icon/4.png' wx:if="{{!but_4}}"></image>
+          <image src='https://www.uumon.com/rgtImg/icon/选中按钮4@2x.png' wx:if="{{but_4}}"></image>
+        </swiper-item>
+        <swiper-item bindtap='clickBtn5' data-hash="m5">
+          <image src='https://www.uumon.com/rgtImg/icon/5.png' wx:if="{{!but_5}}"></image>
+          <image src='https://www.uumon.com/rgtImg/icon/选中按钮5@2x.png' wx:if="{{but_5}}"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+    <!-- Banner -->
+    <view class="banner">
+      <swiper class='swipers' interval="{{banner_interval}}" duration="{{banner_duration}}" current="{{currentSwiper}}" bindchange="swiperChange" autoplay="{{true}}">
+        <block wx:for="{{imgs}}" wx:key="url">
+          <swiper-item>
+            <image src="{{item.url}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <!-- banner小圆点 -->
+      <view class="dots">
+        <block wx:for="{{imgs}}" wx:key="url">
+          <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+        </block>
+      </view>
+      <image bindtap="goToMiniProgram" src="{{microShowImg}}" class="into3D" wx:if='{{isHave3D}}' />
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-into-view="{{toView}}" style="height:{{winHeight}}" class="scroll-area" scroll-with-animation="{{true}}" bindscroll="scrollContent">
+    <view style="padding-bottom:50rpx">
+
+      <!-- 详情介绍 -->
+      <view class="paragraph clearfix" id="m1" style="padding-top:20rpx">
+        <image src="https://www.uumon.com/rgtImg/detail/选中 copy@2x.png" class="arrow" />
+        <image src="https://www.uumon.com/rgtImg/detail/详情介绍@2x.png" class="p-title" />
+      </view>
+      <view class="content padding-top-20">
+        <text decode="{{true}}" style="line-height:50rpx">{{detail}}</text>
+      </view>
+      <!-- 开放细节 -->
+      <view class="paragraph clearfix" id="m3">
+        <image src="https://www.uumon.com/rgtImg/detail/选中 copy@2x.png" class="arrow" />
+        <image src="https://www.uumon.com/rgtImg/detail/开放细节@2x.png" class="p-title" />
+      </view>
+      <view class="content padding-top-20 clearfix">
+        <view class="open-right">
+          <view class="">
+            <view class="FFFFFF" id="open-time">开放时间</view>
+            <text decode="{{true}}">{{open_time}}</text>
+          </view>
+          <view class="open-content">
+            <view class="FFFFFF" id="ticket">票务政策</view>
+            <text decode="{{true}}">{{ticket_policy}}</text>
+          </view>
+          <view class="open-content">
+            <view class="FFFFFF" id="phone">联系电话</view>
+            <text decode="{{true}}">{{phone}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 地址路线 -->
+      <view class="paragraph clearfix" id="m4">
+        <image src="https://www.uumon.com/rgtImg/detail/选中 copy@2x.png" class="arrow" />
+        <image src="https://www.uumon.com/rgtImg/detail/地址路线@2x.png" class="p-title" />
+      </view>
+      <view class="content padding-top-20">
+        <text decode="{{true}}" style="line-height:50rpx">{{address}}</text>
+        <text decode="{{true}}" style="line-height:50rpx">{{traffic}}</text>
+      </view>
+      <!-- 游览须知 -->
+      <view class="paragraph clearfix" id="m5">
+        <image src="https://www.uumon.com/rgtImg/detail/选中 copy@2x.png" class="arrow" />
+        <image src="https://www.uumon.com/rgtImg/detail/浏览须知@2x.png" class="p-title" />
+      </view>
+      <view class="content padding-top-20 guide">
+        <view>1.景区内请勿吸烟。</view>
+        <view>2.景区内禁止游泳、钓鱼。</view>
+        <view>3.请勿将各类管制刀具、打火机、危险品及宠物带入景区。</view>
+        <view>4.参观车辆请在停车场指定位置有序排放。</view>
+        <view>5.团队参观请提前预约。</view>
+        <view>6.酗酒者、衣容不整者、无行为能力或限制行为能力且无监护人陪伴者谢绝进去景区。</view>
+        <view>7.其他有碍游客安全影响游客游览者谢绝进入景区。</view>
+      </view>
+      <view class="wenbaosuo_img">
+        <image class="bottom_img" src="https://www.uumon.com/rgtImg/detail/增加文保所元素.png"></image>
+      </view>
+    </view>
+    <view class="bitmap">
+      <image class="bottom_img" src="https://www.uumon.com/rgtImg/detail/Bitmap@2x(1).png"></image>
+    </view>
+  </scroll-view>

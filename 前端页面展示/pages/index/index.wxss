@@ -1,0 +1,111 @@
+/**
+背景颜色
+*/
+.bg_1{
+  background:#EAEAEA;
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+/**
+头部组件
+*/
+.header {
+  margin: 10rpx 0 10rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.place {
+  font-size: 70rpx;
+  font-weight: 500;
+  display: flex;
+  margin: 20rpx 0 0 0;
+}
+
+.text-line {
+  height: 100rpx;
+  width: 18rpx;
+  border-radius: 1rpx;
+  background-color: #5fca9c;
+  margin: 0 20rpx 0 0;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temperature >text {
+  font-size: 24rpx;
+  margin: 10rpx 0 0 0;
+  font-weight: 800;
+}
+
+.temperature >image {
+  width: 85rpx;
+  height: 60rpx;
+}
+
+.bg-temp {
+  background-color: #FFFFE0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bg-temp >text {
+  font-size: 30rpx;
+  margin: 0 50rpx 0 80rpx;
+}
+
+/**
+景区
+*/
+.container-item {
+  margin: 30rpx;
+}
+
+.way-header {
+  display: flex;
+}
+
+.bg-way-header-text {
+  margin: 0 50rpx 20rpx 0;
+  background-color: #5fca9c;
+  border-radius: 10rpx;
+  padding: 10rpx 30rpx;
+}
+
+.bg-way-header-text >text {
+  font-size: 36rpx;
+  color: #fff;
+  font-weight: 520;
+}
+
+.scenic-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.scenic-item {
+  width: 49%;
+  margin: 20rpx 0 20rpx 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15rpx;
+}
+
+.scenic-item >image {
+  width: 100%;
+  border-radius: 15rpx;
+}
+
+.scenic-item >text {
+  margin: 10rpx 0 10rpx 0;
+}
